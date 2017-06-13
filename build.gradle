@@ -1,0 +1,26 @@
+subprojects {
+    apply plugin: 'groovy'
+
+    ext {
+        groovyVersion = '2.4.7'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile "org.codehaus.groovy:groovy-all:${groovyVersion}"
+
+        compile "org.springframework.boot:spring-boot-starter-web:1.4.5.RELEASE"
+        compile "org.springframework.boot:spring-boot-starter-jdbc:1.4.5.RELEASE"
+
+        compile "org.springframework.cloud:spring-cloud-starter-zipkin:1.2.1.RELEASE"
+
+        runtime "com.h2database:h2"
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.1'
+}

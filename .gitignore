@@ -1,0 +1,9 @@
+*.db
+.DS_Store
+target/
+.settings/
+nb-configuration.xml
+.idea/
+*.iml
+build/
+.gradle

@@ -1,0 +1,9 @@
+server:
+  port: "${port:8080}"
+
+spring:
+  application:
+    name: service01
+  sleuth:
+    sampler:
+      percentage: 1.0

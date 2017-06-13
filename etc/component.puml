@@ -1,0 +1,14 @@
+@startuml
+
+package "Service01" <<Node>> {
+  CLIENT - [service1.SampleAPI]
+  [service1.SampleAPI] - [service1.SampleService] : async
+  [service1.SampleService] - [RestTemplate]
+}
+
+package "Service02" <<Node>> {
+  [RestTemplate] - [service2.SampleAPI]: http
+  [service2.SampleAPI] - [service2.SampleService]: async
+}
+
+@enduml
